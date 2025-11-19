@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" role="img" aria-label="Foto evento">
+  <rect width="100%" height="100%" fill="#fff" rx="12" stroke="#eee"/>
+  <circle cx="200" cy="120" r="64" fill="#e07a5f" opacity="0.95" />
+  <rect x="40" y="200" width="320" height="40" rx="8" fill="#f2c57c" />
+</svg>

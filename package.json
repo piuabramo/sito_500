@@ -1,0 +1,11 @@
+{
+  "name": "miez-mil-gonars-site",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "wrangler pages dev --port 8787",
+    "publish": "wrangler publish"
+  },
+  "devDependencies": {
+    "wrangler": "^2.0.0"
+  }
+}

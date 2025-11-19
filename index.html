@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Miez Mil - Gonars</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo-badge" aria-hidden="true">500</div>
+        <div>
+          <h1 class="logo">Miez Mil</h1>
+          <div class="tagline">Club Fiat 500 - Gonars</div>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Apri menu">☰</button>
+      <nav class="main-nav" aria-label="Menu principale">
+        <a href="#lotteria">Lotteria</a>
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        btn.classList.toggle('open');
+      });
+      document.querySelectorAll('.main-nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+    }
+  </script>
+
+  <main>
+    <section id="lotteria" class="hero container">
+      <h2>Biglietto della Lotteria</h2>
+      <p>Scopri i 5 premi in palio — il primo premio è in evidenza.</p>
+
+      <div class="ticket">
+        <div class="ticket-left">
+          <div class="prize-list">
+            <div class="mini-ticket first">
+              <div class="mini-left">
+                <div>
+                  <div class="prize-rank">1° Premio</div>
+                  <div class="prize-desc">Weekend vintage + Restauro Fiat 500</div>
+                </div>
+                <div class="prize-code">MM-001</div>
+              </div>
+            </div>
+
+            <div class="mini-ticket">
+              <div class="mini-left">
+                <div>
+                  <div class="prize-rank">2° Premio</div>
+                  <div class="prize-desc">Bicicletta elettrica</div>
+                </div>
+                <div class="prize-code">MM-002</div>
+              </div>
+            </div>
+
+            <div class="mini-ticket">
+              <div class="mini-left">
+                <div>
+                  <div class="prize-rank">3° Premio</div>
+                  <div class="prize-desc">Buono spesa €200</div>
+                </div>
+                <div class="prize-code">MM-003</div>
+              </div>
+            </div>
+
+            <div class="mini-ticket">
+              <div class="mini-left">
+                <div>
+                  <div class="prize-rank">4° Premio</div>
+                  <div class="prize-desc">Tablet</div>
+                </div>
+                <div class="prize-code">MM-004</div>
+              </div>
+            </div>
+
+            <div class="mini-ticket">
+              <div class="mini-left">
+                <div>
+                  <div class="prize-rank">5° Premio</div>
+                  <div class="prize-desc">Macchina da caffè</div>
+                </div>
+                <div class="prize-code">MM-005</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="muted">Questo biglietto è una rappresentazione grafica: codici e premi sono definitivi solo con l'estrazione ufficiale.</p>
+    </section>
+
+    <section id="chi-siamo" class="container">
+      <h2>Chi siamo</h2>
+      <p>"Miez Mil" è un'associazione culturale e ricreativa con sede a Gonars (UD). L'associazione organizza eventi, feste e iniziative per la raccolta fondi, promuovendo la socialità e la partecipazione della comunità locale.</p>
+      <p>Informazioni pubbliche sul territorio di Gonars (storia, monumenti e attività civiche) sono disponibili sul sito del Comune di Gonars e su Wikipedia; qui riportiamo una sintesi pensata per il sito dell'associazione.</p>
+      <p>Fonti: <a href="https://it.wikipedia.org/wiki/Gonars">Wikipedia - Gonars</a>, <a href="https://www.comune.gonars.ud.it/">Comune di Gonars</a>.</p>
+    </section>
+
+    <section id="contatti" class="container">
+      <h2>Contatti</h2>
+      <p>Presidente: <strong>Nome Presidente (da confermare)</strong></p>
+      <p>Email: <a href="mailto:info@miezmil.gonars.it">info@miezmil.gonars.it</a> (se non funziona, invia il contatto corretto)</p>
+      <p>Telefono: <strong>+39 347 000 0000</strong> (numero esemplificativo)</p>
+      <p>Indirizzo: Via Esempio 1, Gonars (UD) (da aggiornare)</p>
+      <p>Pagina Facebook / Social: <em>da collegare — cercare la pagina ufficiale dell'associazione</em></p>
+      <p class="muted">Nota: i dettagli dei contatti sono segnaposti. Fornisci i dati ufficiali e li aggiorno subito.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Miez Mil - Gonars</small>
+    </div>
+  </footer>
+</body>
+</html>

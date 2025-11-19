@@ -1,0 +1,12 @@
+name = "miez-mil-gonars"
+main = "index.html"
+compatibility_date = "2025-11-19"
+
+# Per Workers Sites
+type = "javascript"
+account_id = "" # inserisci il tuo account_id Cloudflare
+zone_id = ""    # opzionale se userai Pages o Workers con dominio
+
+[site]
+bucket = "./"
+entry-point = "./"
