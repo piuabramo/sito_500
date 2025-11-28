@@ -12,48 +12,45 @@
   <header class="site-header">
     <div class="container">
       <div class="brand">
-        <div class="logo-badge" aria-hidden="true">500</div>
+        <img class="logo-image" src="assets/logo500.png" alt="Logo Grup MIez Mil Gonars" width="56" height="56">
         <div>
-          <h1 class="logo">Miez Mil</h1>
-          <div class="tagline">Club Fiat 500 - Gonars</div>
+          <h1 class="logo">Grup Miez Mil Gonars</h1>
         </div>
       </div>
       <button class="nav-toggle" aria-label="Apri menu">☰</button>
       <nav class="main-nav" aria-label="Menu principale">
-        <a href="#lotteria">Lotteria</a>
+        <a href="#raduno30">30° raduno</a>
+        <a href="#regolamento">Regolamento lotteria</a>
+        <a href="#lotteria">Esempio biglietto</a>
         <a href="#chi-siamo">Chi siamo</a>
-        <a href="#contatti">Contatti</a>
       </nav>
     </div>
   </header>
 
-  <script>
-    const btn = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.main-nav');
-    if (btn && nav) {
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('open');
-        btn.classList.toggle('open');
-      });
-      document.querySelectorAll('.main-nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
-    }
-  </script>
 
   <main>
+    <section id="raduno30" class="container">
+      <h2>30° raduno</h2>
+      <p>Il 30° raduno di Fiat 500 e derivate si terrà a Gonars il 25–26 aprile 2026. Presto pubblicheremo il programma dettagliato dell'evento.</p>
+    </section>
+
+    <section id="regolamento" class="container">
+      <h2>Regolamento lotteria</h2>
+      <button class="btn open-regolamento" aria-haspopup="dialog" aria-controls="modal-regolamento">Apri regolamento (PDF)</button>
+    </section>
+
     <section id="lotteria" class="hero container">
       <h2>Biglietto della Lotteria</h2>
-      <p>Scopri i 5 premi in palio — il primo premio è in evidenza.</p>
 
       <div class="ticket">
         <div class="ticket-left">
           <div class="prize-list">
             <div class="mini-ticket first">
               <div class="mini-left">
-                <div>
-                  <div class="prize-rank">1° Premio</div>
-                  <div class="prize-desc">Weekend vintage + Restauro Fiat 500</div>
-                </div>
-                <div class="prize-code">MM-001</div>
+                <div class="prize-rank">1° Premio</div>
+                <img class="prize-img" src="assets/500.png" alt="Immagine premio 1: Fiat 500 d'epoca" width="120" height="80" onerror="this.onerror=null;this.src='https://picsum.photos/seed/fiat500/120/80'">
+                <div class="prize-desc">Fiat 500 d'epoca</div>
+                <div class="prize-code blurred" aria-label="Codice non estratto">CODICE</div>
               </div>
             </div>
 
@@ -99,17 +96,17 @@
           </div>
         </div>
       </div>
-      <p class="muted">Questo biglietto è una rappresentazione grafica: codici e premi sono definitivi solo con l'estrazione ufficiale.</p>
+      <p hidden class="muted">Questo biglietto è una rappresentazione grafica: codici e premi sono definitivi solo con l'estrazione ufficiale.</p>
+      <p class="muted">Il ricavato sarà devoluto a "I Ragazzi del Collio di Fraelacco ODV" del centro medico pedagogico S. Maria dei Colli.</p>
     </section>
 
     <section id="chi-siamo" class="container">
       <h2>Chi siamo</h2>
-      <p>"Miez Mil" è un'associazione culturale e ricreativa con sede a Gonars (UD). L'associazione organizza eventi, feste e iniziative per la raccolta fondi, promuovendo la socialità e la partecipazione della comunità locale.</p>
-      <p>Informazioni pubbliche sul territorio di Gonars (storia, monumenti e attività civiche) sono disponibili sul sito del Comune di Gonars e su Wikipedia; qui riportiamo una sintesi pensata per il sito dell'associazione.</p>
-      <p>Fonti: <a href="https://it.wikipedia.org/wiki/Gonars">Wikipedia - Gonars</a>, <a href="https://www.comune.gonars.ud.it/">Comune di Gonars</a>.</p>
+      <p>Per chi non lo sapesse diamo un cenno sulle attività del “Grup miez mil”. Nasce nel 1998 da un gruppo di amici gonaresi, che resisi conto della grande passione che li accomunava per queste piccole auto, si presero la responsabilità di organizzare il raduno delle Fiat 500 e derivate, che ha accompagnato sin dagli inizi la manifestazione “Fiera delle rondini” di Gonars.</p>
+      <p>“Miez Mil”, significa mezzo mille nella mari lenghe ed è stato utilizzato prendendo spunto dalla vecchia moneta da 500 lire, visto che la cilindrata delle nostre vetture è proprio 500 cc.</p>
     </section>
 
-    <section id="contatti" class="container">
+    <section id="contatti" class="container" hidden>
       <h2>Contatti</h2>
       <p>Presidente: <strong>Nome Presidente (da confermare)</strong></p>
       <p>Email: <a href="mailto:info@miezmil.gonars.it">info@miezmil.gonars.it</a> (se non funziona, invia il contatto corretto)</p>
@@ -121,10 +118,100 @@
 
   </main>
 
+  <!-- Modal Regolamento -->
+  <div class="modal-overlay" id="modal-regolamento" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal">
+      <h3 id="modal-title">Regolamento in arrivo</h3>
+      <p>Il regolamento verrà pubblicato presto. Torna a visitarci nei prossimi giorni.</p>
+      <div class="modal-actions">
+        <button class="btn btn-primary close-modal" aria-label="Chiudi">Chiudi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Codice Lotteria -->
+  <div class="modal-overlay" id="modal-codice" role="dialog" aria-modal="true" aria-labelledby="modal-codice-title" hidden>
+    <div class="modal">
+      <h3 id="modal-codice-title">Codice lotteria</h3>
+      <p>Il codice verrà comunicato dopo l'estrazione.</p>
+      <div class="modal-actions">
+        <button class="btn btn-primary close-modal-codice" aria-label="Chiudi">Chiudi</button>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
       <small>© Miez Mil - Gonars</small>
     </div>
   </footer>
+  <script>
+    // Nav toggle
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.main-nav');
+      if (btn && nav) {
+        btn.addEventListener('click', () => {
+          nav.classList.toggle('open');
+          btn.classList.toggle('open');
+        });
+        document.querySelectorAll('.main-nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!nav.classList.contains('open')) return;
+          const target = e.target;
+          if (nav.contains(target) || btn.contains(target)) return;
+          nav.classList.remove('open');
+          btn.classList.remove('open');
+        });
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            nav.classList.remove('open');
+            btn.classList.remove('open');
+          }
+        });
+      }
+    })();
+
+    // Modal Regolamento
+    (function(){
+      const openBtn = document.querySelector('.open-regolamento');
+      const overlay = document.getElementById('modal-regolamento');
+      const closeBtn = overlay ? overlay.querySelector('.close-modal') : null;
+      const openModal = () => { if (overlay) overlay.hidden = false; };
+      const closeModal = () => { if (overlay) overlay.hidden = true; };
+      if (openBtn && overlay) {
+        openBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+      }
+      if (overlay) {
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+      }
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+      }
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    })();
+
+    // Modal per codice lotteria su click del codice
+    (function(){
+      const overlay = document.getElementById('modal-codice');
+      if (!overlay) return;
+      const closeBtn = overlay.querySelector('.close-modal-codice');
+      const openModal = () => { overlay.hidden = false; };
+      const closeModal = () => { overlay.hidden = true; };
+      document.querySelectorAll('.prize-code').forEach(el => {
+        el.setAttribute('role','button');
+        el.setAttribute('tabindex','0');
+        el.addEventListener('click', openModal);
+        el.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
+        });
+      });
+      overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => { if (!overlay.hidden && e.key === 'Escape') closeModal(); });
+    })();
+  </script>
 </body>
 </html>
