@@ -1,12 +1,8 @@
 name = "miez-mil-gonars"
-main = "index.html"
 compatibility_date = "2025-11-19"
 
-# Per Workers Sites
-type = "javascript"
-account_id = "" # inserisci il tuo account_id Cloudflare
-zone_id = ""    # opzionale se userai Pages o Workers con dominio
-
-[site]
-bucket = "./"
-entry-point = "./"
+# This project deploys via Cloudflare Pages.
+# No Workers entrypoint or [site] configuration is needed.
+# If you later switch to Workers, reintroduce the proper fields.
+pages_build_output_dir = "./"
+account_id = "a0592646a2b84958d2b8ab7ec9d1cb74"
