@@ -55,12 +55,6 @@ h3{font-size:1.05rem;color:var(--accent);margin-top:0.6rem}
 .mini-left .prize-code{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere;word-break:break-word;overflow:hidden;contain:paint;isolation:isolate;display:block;hyphens:auto;margin-right:20px}
 .mini-left .prize-code{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere;word-break:break-word;margin-right:20px}
 .mini-ticket.first{border-color:var(--accent-2);background:linear-gradient(90deg,#fff9ec,#fffef6)}
-
-/* Hide all prizes except the first */
-.prize-list .mini-ticket:not(.first){display:none}
-
-/* Blur style for hidden code */
-.blurred{filter:blur(6px);user-select:none;text-shadow:0 0 8px rgba(0,0,0,0.25)}
 /* Prize image inside first ticket */
 .prize-img{display:block;width:auto;height:100%;object-fit:cover;border-radius:6px;margin:0;border:0}
 /* Inline group for non-first tickets: rank + desc */
